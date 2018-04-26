@@ -1,0 +1,46 @@
+<form class="page-form" (ngSubmit)="onSubmit()">
+
+  <h2 class="mat-display-2">Simple Form</h2>
+
+  <mat-form-field>
+    <input
+      matInput
+      [(ngModel)]="firstName"
+      required
+      name="firstName"
+      placeholder="First Name" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      [(ngModel)]="middleName"
+      name="middleName"
+      placeholder="Middle Name" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      [(ngModel)]="lastName"
+      required
+      name="lastName"
+      placeholder="Last Name" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      type="number"
+      [(ngModel)]="age"
+      required
+      name="age"
+      placeholder="Age" />
+    <mat-hint>Numbers only, please</mat-hint>
+  </mat-form-field>
+
+  <div class="button-row">
+    <button mat-raised-button color="accent">Submit</button>
+  </div>
+
+</form>

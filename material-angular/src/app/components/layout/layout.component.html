@@ -1,0 +1,32 @@
+<mat-sidenav-container id="main-content-container">
+
+  <mat-sidenav [opened]="navOpen"
+               (closedStart)="navClosed()">
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let item of navItems" routerLink="{{item.path}}" routerLinkActive="selected" (click)="navClosed()">
+        {{item.title}}
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="openMainNav()">
+        <mat-icon aria-label="View main navigation">menu</mat-icon>
+      </button>
+      <span>Material in Angular</span>
+      <span class="example-spacer"></span>
+      <button mat-button (click)="openModal()">Modal</button>
+      <button mat-icon-button (click)="navigateToRepo()">
+        <mat-icon aria-label="View the code">code</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

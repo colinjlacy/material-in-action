@@ -1,0 +1,56 @@
+<div class="example-container mat-elevation-z8">
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <!-- Selection Column -->
+    <ng-container matColumnDef="select">
+      <mat-header-cell *matHeaderCellDef>
+        <mat-checkbox (change)="$event ? masterToggle() : null"
+                      [checked]="selection.hasValue() && isAllSelected()"
+                      [indeterminate]="selection.hasValue() && !isAllSelected()">
+        </mat-checkbox>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <mat-checkbox (click)="$event.stopPropagation()"
+                      (change)="$event ? selection.toggle(row) : null"
+                      [checked]="selection.isSelected(row)">
+        </mat-checkbox>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Dessert (100g serving) </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Calories Column -->
+    <ng-container matColumnDef="calories">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Calories </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.calories}} </mat-cell>
+    </ng-container>
+
+    <!-- Fat Column -->
+    <ng-container matColumnDef="fat">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Fat (g) </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.fat}} </mat-cell>
+    </ng-container>
+
+    <!-- Carbs Column -->
+    <ng-container matColumnDef="carbs">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Carbs (g) </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.carbs}} </mat-cell>
+    </ng-container>
+
+    <!-- Protein Column -->
+    <ng-container matColumnDef="protein">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Protein (g) </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.protein}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="[10, 25, 50, 100]"></mat-paginator>
+</div>

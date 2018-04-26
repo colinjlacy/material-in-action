@@ -1,0 +1,19 @@
+h2 {
+  margin-bottom: 1rem;
+}
+
+.page-form {
+  max-width: 800px;
+  width: 100%;
+
+  .mat-form-field {
+    width: 100%;
+  }
+
+  .button-row {
+    display: flex;
+    width: 100%;
+    margin-top: 2rem;
+    justify-content: flex-end;
+  }
+}
