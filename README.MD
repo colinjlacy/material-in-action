@@ -15,6 +15,10 @@ Each project was built with the (or in the case of React, one of many) official 
 
 Be sure to install NPM dependencies first!
 
+## Custom Theme
+
+If you'd like to see an example of a custom theme, I've added a branch to this repo called `angular-custom-theme`.  Checkout that branch and run the Angular project.  You'll see that the primary, secondary, and error colors have been customized.  On top of that, in `app/components/layout/layout.component.scss` I've used colors from the theme in styling some of the elements.
+
 ## A Note on the Code
 
 It's worth pointing out that I'm an Angular guy, so by no means are the React and Vue examples meant to be taken as an example of best practices.  Because for both React and Vue, the folders herein show the first code I've ever written using either.  Really.
