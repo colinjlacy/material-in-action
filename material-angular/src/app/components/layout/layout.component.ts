@@ -44,7 +44,7 @@ export class LayoutComponent implements OnInit {
   }
 
   public navigateToRepo() {
-    window.location = 'https://github.com/colinjlacy/material-in-action';
+    window.location.href = 'https://github.com/colinjlacy/material-in-action';
   }
 
 }
