@@ -1,4 +1,12 @@
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/theming';
+
+// always include only once per project
+@include mat-core();
+
+// import our custom theme
+@import 'app/app-theme';
+
+@include angular-material-theme($my-theme);
 
 html, body {
   margin: 0;

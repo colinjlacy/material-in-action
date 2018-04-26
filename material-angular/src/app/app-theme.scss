@@ -1,0 +1,111 @@
+// Define the default theme (same as the example above).
+$custom-primary-palette: (
+  50 : #eaecee,
+  100 : #cad0d4,
+  200 : #a7b1b8,
+  300 : #83919b,
+  400 : #697a85,
+  500 : #4e6270,
+  600 : #475a68,
+  700 : #3d505d,
+  800 : #354653,
+  900 : #253441,
+  A100 : #8ac9ff,
+  A200 : #57b1ff,
+  A400 : #249aff,
+  A700 : #0a8eff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #ffffff,
+  )
+);
+
+$custom-secondary-palette: (
+  50 : #e3faf8,
+  100 : #b9f3ef,
+  200 : #8aece4,
+  300 : #5be4d9,
+  400 : #38ded0,
+  500 : #15d8c8,
+  600 : #12d4c2,
+  700 : #0fcebb,
+  800 : #0cc8b4,
+  900 : #06bfa7,
+  A100 : #e8fffc,
+  A200 : #b5fff4,
+  A400 : #82ffed,
+  A700 : #69ffe9,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$custom-warn-palette: (
+  50 : #f6e4e3,
+  100 : #e9bcb9,
+  200 : #da8f8b,
+  300 : #cb625c,
+  400 : #c04039,
+  500 : #b51e16,
+  600 : #ae1a13,
+  700 : #a51610,
+  800 : #9d120c,
+  900 : #8d0a06,
+  A100 : #ffbbba,
+  A200 : #ff8987,
+  A400 : #ff5754,
+  A700 : #ff3e3b,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #ffffff,
+  )
+);
+
+
+$my-theme-primary: mat-palette($custom-primary-palette);
+$my-theme-accent: mat-palette($custom-secondary-palette);
+$my-theme-warn: mat-palette($custom-warn-palette, A400, A200, A700);
+
+// create theme (use mat-dark-theme for themes with dark backgrounds)
+$my-theme: mat-light-theme(
+    $my-theme-primary,
+    $my-theme-accent,
+    $my-theme-warn
+);

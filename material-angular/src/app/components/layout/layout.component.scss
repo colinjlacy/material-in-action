@@ -1,12 +1,19 @@
+@import "../../app-theme";
+
 .example-spacer {
   flex: 1 1 auto;
 }
 .mat-sidenav {
   width: 250px;
+  background-color: map-get($custom-primary-palette, 900);
+  .mat-nav-list .mat-list-item {
+    color: map-get($custom-primary-palette, 50);
+  }
 }
 
 .mat-sidenav-container {
   height: 100%;
+  background-color: lighten(map-get($custom-primary-palette, 50), 5%);
 }
 
 .main-content {

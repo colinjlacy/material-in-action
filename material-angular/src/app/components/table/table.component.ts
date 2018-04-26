@@ -4,7 +4,6 @@ import { SelectionModel } from '@angular/cdk/collections';
 
 export interface FoodEntry {
   id: number,
-  counter: number,
   name: string,
   calories: number,
   fat: number,
@@ -71,11 +70,8 @@ export class TableComponent implements AfterViewInit {
       this.dataSource.data.forEach(row => this.selection.select(row));
   }
 
-  private createData(name, calories, fat, carbs, protein): Array<FoodEntry> {
+  private createData(name, calories, fat, carbs, protein): FoodEntry {
     this.counter += 1;
     return {id: this.counter, name, calories, fat, carbs, protein};
   }
-
 }
-
-function
